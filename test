@@ -1,0 +1,25 @@
+#!/bin/bash
+
+# Function to create a user
+create_user() {
+    read -p "Enter username to create: " username
+    sudo useradd -m "$username" && echo "User $username created successfully."
+}
+
+# Function to delete a user
+delete_user() {
+    read -p "Enter username to delete: " username
+    sudo userdel -r "$username" && echo "User $username deleted successfully."
+}
+
+# Menu options
+echo "1. Create User"
+echo "2. Delete User"
+read -p "Choose an option (1/2): " choice
+
+case $choice in
+    1) create_user ;;
+    2) delete_user ;;
+    *) echo "Invalid option. Exiting." ;;
+esac
+
