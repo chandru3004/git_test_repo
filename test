@@ -23,3 +23,7 @@ case $choice in
     *) echo "Invalid option. Exiting." ;;
 esac
 
+echo
+New word
+New word2
+
