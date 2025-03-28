@@ -1,0 +1,20 @@
+#!/bin/bash
+
+# Check if the argument is given
+if [ $# -ne 1 ]; then
+    echo "Usage: $0 <file_or_directory>"
+    exit 1
+fi
+
+# Assign the input to a variable
+TARGET=$1
+
+# Check if the file or directory exists
+if [ -e "$TARGET" ]; then
+    chmod 775 "$TARGET"
+    echo "Permissions changed to 775 for $TARGET"
+else
+    echo "Error: $TARGET does not exist!"
+    exit 1
+fi
+Added one file..[New word]

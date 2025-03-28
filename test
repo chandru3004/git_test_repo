@@ -22,6 +22,8 @@ case $choice in
     2) delete_user ;;
     *) echo "Invalid option. Exiting." ;;
 esac
+
 echo
 New word
 New word2
+
